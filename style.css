@@ -1,0 +1,82 @@
+/* Box sizing reset */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* General Styles */
+
+header {
+    padding: 20px;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    text-align: left;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    background-color: #ffea82;
+}
+
+h1 {
+    font-size: 3em;
+    font-weight: 700;
+    padding: 20px 0;
+}
+
+h2 {
+    padding: 15px 0;
+}
+
+h3 {
+    padding: 10px 0;
+}
+
+p {
+    font-size: 1em;
+    padding: 5px 0;
+}
+
+.message-img {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    /* Center content vertically */
+    width: 100%;
+    /* Take up the full width of the parent container */
+    height: 150px;
+    margin-top: 20px;
+}
+
+.weather-animation svg {
+    height: 150px;
+    width: 150px;
+}
+
+.forecast {
+    display: grid;
+    gap: 20px;
+}
+
+/****** TALBLET ******/
+@media only screen and (min-width:768px) {
+
+    /*Tablet styles here*/
+    .forecast {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+/****** DESKTOP ******/
+@media only screen and (min-width:1200px) {
+
+    /*Desktop styles here*/
+    .forecast {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
